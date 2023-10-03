@@ -5,11 +5,9 @@ import Greeting from './components/Greeting';
 const App = () => (
   <Routes>
 
-  <Route path="/" element={<Greeting />}>
+    <Route path="/" element={<Greeting />} />
 
-  </Route>
-
-</Routes>
+  </Routes>
 );
 
 export default App;
