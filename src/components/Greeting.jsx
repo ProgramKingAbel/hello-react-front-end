@@ -6,17 +6,7 @@ const Greeting = () => {
   const dispatch = useDispatch();
   const greeting = useSelector((state) => state.greeting.message);
   useEffect(() => {
-    if (!greeting) {
-      dispatch(fetchMessage())
-        .then(() => {
-        // eslint-disable-next-line
-          console.log('Greeting fetched successfully');
-        })
-        .catch((error) => {
-        // eslint-disable-next-line
-          console.error('Error fetching greeting:', error);
-        });
-    }
+    dispatch(fetchMessage());
   }, [dispatch, greeting]);
 
   return (
